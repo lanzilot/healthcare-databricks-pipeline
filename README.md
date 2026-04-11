@@ -1,4 +1,4 @@
-# Healthcare Patient Stay Analytics on Databricks
+# Healthcare Patient Analytics on Databricks
 
 ## Overview
 End‑to‑data pipeline on Databricks using the medallion architecture (bronze → silver → gold).  
