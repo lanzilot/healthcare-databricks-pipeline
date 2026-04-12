@@ -35,7 +35,7 @@ Using the silver layer (`silver_patient_charges`), Performed additional diagnosi
 
 **Visualization:** Interactive Bar chart showing top diseases per month (sorted top to lowest by case count).
 
-**Business value:** Helps hospital administration identify seasonal disease trends, allocate resources, and design public health interventions.
+**Business value:** Helps hospital administration identify seasonal disease trends, allocate resources and manpower.
 
 ## How to Run
 1. Import notebooks into Databricks (Community Edition or full workspace)
