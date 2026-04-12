@@ -16,6 +16,30 @@ Cleans messy healthcare data, joins patient admissions with charges, and produce
    - Total revenue by service
    - Monthly admission trend
 
+Top Diseases per Month – Clinical Analytics
+## Top Diseases per Month
+Using the silver layer (`silver_patient_charges`), I performed additional diagnosis cleaning:
+- Split comma‑separated diagnosis strings into individual rows.
+- Standardized synonyms (e.g., `HPT` → `hypertension`).
+- Filtered out noise (`10`, `unspecified`, `as 9`, `null` dates).
+- Aggregated case counts by `year_month` and ranked the top 5 diagnoses per month.
+
+**Gold table created:** `gold_top_diseases_per_month_cleaned`
+
+**Sample output:**
+| year_month | diagnosis_std                                              | case_count |
+|------------|------------------------------------------------------------|------------|
+| 2017-01    | end stage renal disease secondary to hypertensive ...     | 284        |
+| 2017-01    | end stage renal disease secondary to diabetic nephropathy | 192        |
+| 2017-01    | acute gastroenteritis with moderate dehydration           | 88         |
+
+**Visualization:** Interactive Bar chart showing top diseases per month (sorted top to lowest by case count).
+
+![Top Diseases Chart](images/top_diseases_chart.png)
+
+**Business value:** Helps hospital administration identify seasonal disease trends, allocate resources, and design public health interventions.
+
+
 ## How to Run
 1. Import notebooks into Databricks (Community Edition or full workspace)
 2. Upload the sample CSVs to a Unity Catalog volume or DBFS
