@@ -39,7 +39,7 @@ Using the silver layer (`silver_patient_charges`), Performed additional diagnosi
 **Business value:** Helps hospital administration identify seasonal disease trends, allocate resources and manpower.
 
 ## How to Run
-1. Import notebooks into Databricks (Community Edition or full workspace)
+1. Import notebooks into Databricks 
 2. Upload the sample CSVs to a Unity Catalog volume or DBFS
 3. Run notebooks in order: `1_bronze_ingestion` → `2_silver_cleaning` → `3_gold_aggregation`
 
