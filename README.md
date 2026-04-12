@@ -34,11 +34,7 @@ Using the silver layer (`silver_patient_charges`), Performed additional diagnosi
 | 2017-01    | acute gastroenteritis with moderate dehydration           | 88         |
 
 **Visualization:** Interactive Bar chart showing top diseases per month (sorted top to lowest by case count).
-
-![Top Diseases Chart](images/top_diseases_chart.png)
-
 **Business value:** Helps hospital administration identify seasonal disease trends, allocate resources, and design public health interventions.
-
 
 ## How to Run
 1. Import notebooks into Databricks (Community Edition or full workspace)
