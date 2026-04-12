@@ -12,9 +12,10 @@ Cleans messy healthcare data, joins patient admissions with charges, and produce
 1. **Bronze** – ingest CSVs into Delta tables
 2. **Silver** – clean timestamps (handles both `09:15AM` and `12:45 AM`), extract numeric age from strings like `26 y/o 9 mos.`, compute length of stay, flag age mismatches, aggregate charges, join tables
 3. **Gold** – create aggregated views:
-   - Average length of stay by diagnosis
+   - Average length of stay 
    - Total revenue by service
    - Monthly admission trend
+   - Top Disease per month
 
 Top Diseases per Month – Clinical Analytics
 ## Top Diseases per Month
