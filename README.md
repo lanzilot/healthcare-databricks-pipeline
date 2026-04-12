@@ -18,7 +18,7 @@ Cleans messy healthcare data, joins patient admissions with charges, and produce
 
 Top Diseases per Month – Clinical Analytics
 ## Top Diseases per Month
-Using the silver layer (`silver_patient_charges`), I performed additional diagnosis cleaning:
+Using the silver layer (`silver_patient_charges`), Performed additional diagnosis cleaning:
 - Split comma‑separated diagnosis strings into individual rows.
 - Standardized synonyms (e.g., `HPT` → `hypertension`).
 - Filtered out noise (`10`, `unspecified`, `as 9`, `null` dates).
