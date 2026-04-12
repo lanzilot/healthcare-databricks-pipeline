@@ -36,7 +36,12 @@ Using the silver layer (`silver_patient_charges`), Performed additional diagnosi
 
 **Visualization:** Interactive Bar chart showing top diseases per month.
 
-**Business value:** Helps hospital administration identify seasonal disease trends, allocate resources and manpower.
+**Business value:** 
+Average Length of Stay - helps hospitals optimize bed utilization, control operational costs, and improve patient flow. By analyzing ALOS, management can identify inefficiencies in treatment or discharge processes, ensure better resource allocation, and align hospital operations with financial and clinical performance goals.
+
+Top Disease Per Month - This insight helped management prioritize the procurement of essential medicines and medical supplies, ensuring that frequently used medications were always available and reducing the risk of shortages
+
+Monthly admission trend - This information helped management determine appropriate manpower allocation, ward utilization, and room planning to better accommodate patient demand and improve hospital operations
 
 ## How to Run
 1. Import notebooks into Databricks 
