@@ -46,13 +46,16 @@ Monthly admission trend - This information helped management determine appropria
 ## Orchestration: Databricks Job (Medallion Pipeline)
 To fully automate the data pipeline, I created a Databricks Job that runs the three medallion layer notebooks in sequence.
 Job Tasks & Dependencies:
+
 Task Name	      Notebook	            Depends On
 bronze_ingestion	1_bronze_ingestion	–
 silver_cleaning	2_silver_cleaning	   bronze_ingestion
 gold_aggregation	3_gold_aggregation	silver_cleaning
+
 The dependencies ensure that:
 -Silver runs only after Bronze successfully completes.
 -Gold runs only after Silver successfully completes.
+
 Outcome
 Every day, the job:
 Ingests fresh CSV data into Bronze Delta tables.
