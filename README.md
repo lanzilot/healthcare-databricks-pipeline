@@ -43,28 +43,16 @@ Top Disease Per Month - This insight helped management prioritize the procuremen
 
 Monthly admission trend - This information helped management determine appropriate manpower allocation, ward utilization, and room planning to better accommodate patient demand and improve hospital operations
 
-## How to Run
-1. Import notebooks into Databricks 
-2. Upload the sample CSVs to a Unity Catalog volume or DBFS
-3. Run notebooks in order: `1_bronze_ingestion` → `2_silver_cleaning` → `3_gold_aggregation`
-
-## Results
-- Silver table: `default.silver_patient_charges` (41,213 admissions)
-- Gold tables: KPIs ready for dashboards
-
 ## Orchestration: Databricks Job (Medallion Pipeline)
 To fully automate the data pipeline, I created a Databricks Job that runs the three medallion layer notebooks in sequence.
-
 Job Tasks & Dependencies:
 Task Name	      Notebook	            Depends On
 bronze_ingestion	1_bronze_ingestion	–
 silver_cleaning	2_silver_cleaning	   bronze_ingestion
 gold_aggregation	3_gold_aggregation	silver_cleaning
-
 The dependencies ensure that:
 -Silver runs only after Bronze successfully completes.
 -Gold runs only after Silver successfully completes.
-
 Outcome
 Every day, the job:
 Ingests fresh CSV data into Bronze Delta tables.
